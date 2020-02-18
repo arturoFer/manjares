@@ -1,0 +1,26 @@
+<div id="page" role="main">
+    <article>
+        <header>
+            <h2>Listado de recetas veganas</h2>
+        </header>
+        <div class="gallery">
+            {{#each recetas}}
+                {{#ifgreaterthan posicion 129 }}
+                <div class="item">
+                    <a href="/receta/{{../posicion}}">
+                        <img alt="Foto receta {{../posicion}}" src="img/{{../posicion}}.jpg">
+                        <p>{{../title}}</p>
+                    </a>
+                </div>
+                {{else}}
+                <div class="item">
+                    <a href="/receta/{{../posicion}}">
+                        <img alt="Foto receta {{../posicion}}" data-src="img/{{../posicion}}.jpg" src="img/preload.jpg">
+                        <p>{{../title}}</p>
+                    </a>
+                </div>
+                {{/ifgreaterthan}}
+            {{/each}}
+        </div>
+    </article>
+</div>

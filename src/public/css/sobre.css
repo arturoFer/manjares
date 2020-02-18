@@ -1,0 +1,367 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-jul-2016, 20:41:48
+    Author     : arturo
+*/
+@font-face{
+    font-family: asapregular;
+    src: url(fonts/Asap-Regular.ttf);
+}
+
+html{
+    font-family: asapregular, Helvetica, Arial, sans-serif;
+    background-image: url(img/texture-recipe.jpg);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Menu Navegacion*/
+#top{
+    display: none;
+}
+
+.cookies{
+    background-color: #1D560D;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+}
+
+.cookies p{
+    margin: 0;
+    display: inline-block;
+}
+
+.cookies a{
+    color: white;
+    font-weight: bold;
+}
+
+#close_cookies{
+    color: white;
+    border-radius: 50%;
+    background-color: #61a647;
+    border: none;
+    font-weight: bolder;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    line-height: 25px;
+}
+
+#close_cookies:hover{
+    background-color: lightgreen;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav{
+    box-shadow: 0 0 2em rgba(0,0,0,.75);
+    position:fixed;
+    top: 40px;
+    width: 100%;
+}
+
+#main-nav.sincookies{
+    top: 0;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+li.brand{
+     background: #61a647 url(img/texture-top.jpg) repeat;
+     height: 70px;
+     line-height: 70px;
+}
+
+li.brand h1{
+    margin: 0;
+    padding: 0 .5em;
+    font-size: 1.5em;
+}
+
+li.brand h1 a{
+    color: white;
+}
+
+#btn-nav{
+    margin:0;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    background: #61a647 url(img/nav.png) no-repeat center;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#btn-nav.sincookies{
+    top: 0;
+}
+
+#menu{
+    background-color: #61a647;
+    height: 0px;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+#menu.desplegado{
+    height: 283px;
+}
+
+#menu li{
+    border-bottom: 1px solid gray;
+    height: 70px;
+    line-height: 70px;
+}
+
+#menu li.last{
+    border-bottom: none;
+}
+
+#menu a{
+    color: white;
+    display: block;
+    width: 100%;
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+li.active{
+    background: url(img/verificacion.png) no-repeat 0.5em center;
+}
+
+/* Menu social */
+#social{
+    text-align: center;
+}
+#social li{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+#social li a{
+    display: block;
+    text-indent: -5000px;
+    border-radius: 50%;
+    background: #1a570d url(img/sprite.png) no-repeat;
+}
+
+#social li.facebook a{
+    background-position: -236px 0px;
+}
+
+#social li.instagram a{
+    background-position: -296px 0px;
+}
+
+#social li.youtube a{
+    background-position: -177px 0px;
+}
+
+#social li.gmas a{
+    background-position: 0px 0px;
+}
+
+/*Social hover*/
+#social li.facebook a:hover{
+    background-color: #3c5a99;
+}
+
+#social li.instagram a:hover{
+    background-color: #4285f4;
+}
+
+#social li.youtube a:hover{
+    background-color: #e12b28;
+}
+#social li.gmas a:hover{
+    background-color: #df5042;
+}
+
+/*Footer*/
+footer{
+    background: #61a647 url(img/texture-top.jpg) repeat;
+    color: white;
+    padding: 1em;
+    margin-top: 1em;
+}
+footer p{
+    margin: 0;
+    margin-top: 0.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Contenido*/
+#page{
+    margin: 0 1em;
+}
+
+#page h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 6.25em;
+}
+
+#page h2.sincookies{
+    margin-top: 4.6em;
+}
+
+.wrapper-photos{
+    text-align: center;
+    width: 100%;
+}
+
+.polaroid{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+    background-color: white;
+    padding: 1em;
+    margin: 1em 0;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    border: 1px solid rgba(0,0,0,.25);
+}
+
+.polaroid img{
+    width: 100%;
+}
+
+/*Ocultar restos ultima página y cookies*/
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width: 50em){
+    
+    #main-nav{
+        height: 70px;
+        width: 100%;
+        background-color: white;
+    }
+    
+    #btn-nav{
+        display: none;
+    }
+    
+    #main-nav li{
+        float: left;
+    }
+    
+    #menu{
+        height: 70px;
+        width: auto;
+        background-color: white;
+    }
+    
+    #menu li{
+        border-bottom: none;
+        width: 120px;
+        border-right: 1px solid rgb(204,204,204);
+    }
+    
+    #menu li a{
+        text-align: center;
+        padding: 0 1em;
+        color: rgb(144,144,144);
+    }
+    
+    #menu li a:hover{
+        color: #61a647;
+    }
+    
+    #menu li.active{
+        background-image: none;
+        box-sizing: border-box;
+        border-bottom: 4px solid #61a647;
+    }
+    
+    #main-nav li a{
+        width: auto;
+    }
+    
+    li.brand{
+        padding-right: 1em;
+    }
+    
+    .polaroid{
+        max-width: 350px;
+        margin: 1em .5em;
+    }
+    
+}
+
+@media screen and (min-width: 64em){
+    
+    #top{
+        display: block;
+        margin-top: 110px;
+    }
+    
+    #top.sincookies{
+        margin-top: 70px;
+    }
+    
+    #top h2{
+        margin: 0;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        background-image: url(img/banner.jpg);
+        color: white;
+        background-size: cover;
+        font-size: 2em;
+    }
+    
+    #page h2, #page h2.sincookies{
+        margin-top: 2em;
+    }
+    
+    li.brand{
+        width: 500px;
+        text-align: center;
+    }
+    
+    .polaroid{
+        max-width: 450px;
+        margin: 1em 1em;
+    }
+}
+
+@media screen and (min-width: 76.25em){
+    #page{
+        width: 1200px;
+        margin: auto;
+        padding: 0;
+    }
+    
+    .polaroid{
+        max-width: 500px;
+        margin: 1em 2em;
+    }
+}

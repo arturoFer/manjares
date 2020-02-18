@@ -1,0 +1,21 @@
+<div id="page" role="main">
+    <article>
+        <header>
+            <h2 id="title">{{receta.title}}</h2>
+        </header>
+        <div class="wrapper-video">
+            <iframe id="video" width="560" height="315" allowfullscreen src="https://www.youtube.com/embed/{{receta.videoId}}"></iframe>
+        </div>
+        <div class="descripcion">
+            <h3>PREPARACIÓN</h3>
+            <p>{{receta.description}}</p>
+        </div>
+    </article>
+    <nav id="paginador">
+        <button id="fav" type="button" title="Añadir/Eliminar a favoritos"></button>
+        <button id="previous" type="button" title="Receta Anterior"></button>
+        <p id="contadorRecetas">Receta</p>
+        <button id="next" type="button" title="Receta Siguiente"></button>
+        <button id="azar" type="button" title="Receta al Azar"></button>
+    </nav>
+</div>
